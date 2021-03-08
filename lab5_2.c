@@ -2,15 +2,45 @@
 void main() {
     int c,r,k,n;
     scanf("%d",&n);
-    for(r=1;r<=n/2;r++)
+    if(n%2!=0)
     {
-        for(k=(n/2)+1;k>r;k--)
+        for(r=1;r<=n/2;r++)
         {
-            printf("_");
+            for(k=(n/2)+1;k>r;k--)
+            {
+                printf("_");
+            }
+            for(c=1;c<r;c++)
+            {
+                if(c==1)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+            }
+            for(c=1;c<=r;c++)
+            {
+                if(c==r)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+            }
+            for(k=(n/2)+1;k>r;k--)
+            {
+                printf("_");
+            }
+            printf("\n");
         }
-        for(c=1;c<r;c++)
+        for(int i=0;i<n;i++)
         {
-            if(c==1)
+            if(i==0||i==n-1)
             {
                 printf("*");
             }
@@ -18,45 +48,85 @@ void main() {
             {
                 printf("_");
             }
-        }
-        for(c=1;c<=r;c++)
-        {
-            if(c==r)
-            {
-                printf("*");
-            }
-            else
-            {
-                printf("_");
-            }
-        }
-        for(k=(n/2)+1;k>r;k--)
-        {
-            printf("_");
         }
         printf("\n");
+        for(r=1;r<=n/2;r++)
+        {
+            for(k=0;k<r;k++)
+            {
+                printf("_");
+            }
+            for(c=(n-1)/2;c>r;c--)
+            {
+                if(c==(n-1)/2)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+                
+            }
+            for(c=(n-1)/2;c>=r;c--)
+            {
+                
+                if(c==r)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+                
+            }
+            for(k=0;k<r;k++)
+            {
+                printf("_");
+            }
+            printf("\n");
+        }
     }
-    for(int i=0;i<n;i++)
+    else
     {
-        if(i==0||i==n-1)
+        for(r=1;r<=n/2;r++)
         {
-            printf("*");
+            for(k=(n/2)+1;k>r;k--)
+            {
+                printf("_");
+            }
+            for(c=1;c<r;c++)
+            {
+                if(c==1)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+            }
+            for(c=1;c<=r;c++)
+            {
+                if(c==r)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+            }
+            for(k=(n/2)+1;k>r;k--)
+            {
+                printf("_");
+            }
+            printf("\n");
         }
-        else
+        for(int i=0;i<n;i++)
         {
-            printf("_");
-        }
-    }
-    printf("\n");
-    for(r=1;r<=n/2;r++)
-    {
-        for(k=0;k<r;k++)
-        {
-            printf("_");
-        }
-        for(c=n;c>r+1;c--)
-        {
-            if(c==n)
+            if(i==0||i==n-1)
             {
                 printf("*");
             }
@@ -64,25 +134,56 @@ void main() {
             {
                 printf("_");
             }
-        }
-        for(c=n;c>=r+1;c--)
-        {
-            if(c==r+1)
-            {
-                printf("*");
-            }
-            else
-            {
-                printf("_");
-            }
-        }
-        
-        
-        for(k=(n/2)+1;k>r;k--)
-        {
-            printf("_");
         }
         printf("\n");
+        for(int i=0;i<n;i++)
+        {
+            if(i==0||i==n-1)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf("_");
+            }
+        }
+        printf("\n");
+        for(r=1;r<=n/2;r++)
+        {
+            for(k=0;k<r;k++)
+            {
+                printf("_");
+            }
+            for(c=(n-1)/2;c>r;c--)
+            {
+                if(c==(n-1)/2)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+                
+            }
+            for(c=(n-1)/2;c>=r;c--)
+            {
+                
+                if(c==r)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf("_");
+                }
+                
+            }
+            for(k=0;k<r;k++)
+            {
+                printf("_");
+            }
+            printf("\n");
+        }
     }
-    
 }
